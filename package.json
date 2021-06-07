@@ -13,7 +13,7 @@
     "build:esm": "babel --config-file ./babel.config.js --extensions \".ts\" ./src --out-dir ./dist/esm",
     "build:cjs": "rollup -c ./rollup.config.js",
     "build": "npm run clean && npm run build:types && npm run build:esm && npm run build:cjs",
-    "release": "npm run publish --access public --non-interactive"
+    "release": "npm publish --access public --non-interactive"
   },
   "files": [
     "dist/",
