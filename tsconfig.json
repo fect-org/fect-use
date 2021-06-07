@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "outDir": "./dist/types",
+    "module": "es2015",
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "emitDeclarationOnly": true,
+    "moduleResolution": "Node",
+    "lib": ["es5", "dom"]
+  },
+  "include": ["src/**/*"]
+}

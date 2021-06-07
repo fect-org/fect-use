@@ -1,0 +1,51 @@
+{
+  "name": "@fect-ui/vue-hooks",
+  "version": "0.0.1",
+  "public": true,
+  "description": "Minimalist Vue Compostion Hooks",
+  "author": "Fect Org",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/types/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build:types": "tsc -p ./tsconfig.json",
+    "build:esm": "babel --config-file ./babel.config.js --extensions \".ts\" ./src --out-dir ./dist/esm",
+    "build:cjs": "rollup -c ./rollup.config.js",
+    "build": "npm run clean && npm run build:types && npm run build:esm && npm run build:cjs",
+    "release": "npm run publish --access public --non-interactive"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "keywords": [
+    "vue compostion Hooks",
+    "fect"
+  ],
+  "homepage": "https://github.com/fay-org/fect-use",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fay-org/fect-use"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-typescript": "^7.13.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "fs-extra": "^10.0.0",
+    "rollup": "^2.51.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2",
+    "vue": "^3.0.11"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.11"
+  },
+  "dependencies": {}
+}
