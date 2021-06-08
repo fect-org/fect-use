@@ -7,6 +7,6 @@ const useTitle = (title: string) => {
   onMounted(setTitle)
   onBeforeUnmount(resetTitle)
   onDeactivated(resetTitle)
-}
+} 
 
 export { useTitle }
