@@ -14,11 +14,10 @@ const useClickAway = (
   target: Element | Ref<Element | undefined>,
   options = defaultOptions
 ) => {
-  console.log(options)
   const onClick = (evt: Event) => {
     const element = unref(target)
     if (element && !element.contains(evt.target as Node)) {
-      listener(evt) 
+      listener(evt)
     }
   }
   useEventListener(options.event!, onClick, { target: document })

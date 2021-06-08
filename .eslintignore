@@ -1,0 +1,4 @@
+dist/*
+.prettierignore
+node_modules
+esintrc.js
